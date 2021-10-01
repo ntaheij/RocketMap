@@ -16,3 +16,8 @@ class UtilsTest(unittest.TestCase):
 
         # Unknown ID raises KeyError
         self.assertRaises(KeyError, utils.get_pokemon_name, 12367)
+    def test_get_pokemon_level(self):
+        self.assertEqual(33, util.get_pokemon_id("4", 333))
+        self.assertEqual(-1, util.get_pokemon_id("3", 333))
+        self.assertEqual(3, util.get_pokemon_id("1", 1024))
+        
